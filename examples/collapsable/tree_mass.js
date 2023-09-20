@@ -34,4 +34,5 @@ node19 = {parent: node18, collapsed: true, text: {filter: 'machine_type is not 2
 node20 = {parent: node18, collapsed: true, text: {filter: 'machine_type is 2Axis', samples: '# Samples: 2', percentage: '% Samples: 6.9%', average: 'Average mass: 1460.22g', range: 'Range: [1105.92g - 1814.53g]', condition: 'lead_time?'}, folders: ['config_2_9', 'config_1_9']},
 node21 = {parent: node20, collapsed: true, text: {filter: 'lead_time <= 22604.0mins', samples: '# Samples: 1', percentage: '% Samples: 3.45', average: 'Average mass: 1814.53', range: 'Range: [1814.53g - 1814.53g]'}, folders: ['config_1_9']},
 node22 = {parent: node20, collapsed: true, text: {filter: 'lead_time > 22604.0mins', samples: '# Samples: 1', percentage: '% Samples: 3.45', average: 'Average mass: 1105.92', range: 'Range: [1105.92g - 1105.92g]'}, folders: ['config_2_9']},
+
 chart_config = [config, node0, node1, node2, node3, node4, node5, node6, node7, node8, node9, node10, node11, node12, node13, node14, node15, node16, node17, node18, node19, node20, node21, node22];

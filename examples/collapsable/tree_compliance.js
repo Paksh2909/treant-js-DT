@@ -42,4 +42,5 @@ node27 = {parent: node26, collapsed: true, text: {filter: 'lead_time <= 21988.0m
 node28 = {parent: node26, collapsed: true, text: {filter: 'lead_time > 21988.0mins', samples: '# Samples: 2', percentage: '% Samples: 6.9%', average: 'Average compliance: 0.0N/m', range: 'Range: [0.0N/m - 0.0N/m]', condition: 'lead_time?'}, folders: ['config_2_8', 'config_2_9']},
 node29 = {parent: node28, collapsed: true, text: {filter: 'lead_time <= 22617.0mins', samples: '# Samples: 1', percentage: '% Samples: 3.45', average: 'Average compliance: 0.0', range: 'Range: [0.0N/m - 0.0N/m]'}, folders: ['config_2_8']},
 node30 = {parent: node28, collapsed: true, text: {filter: 'lead_time > 22617.0mins', samples: '# Samples: 1', percentage: '% Samples: 3.45', average: 'Average compliance: 0.0', range: 'Range: [0.0N/m - 0.0N/m]'}, folders: ['config_2_9']},
+    
 chart_config = [config, node0, node1, node2, node3, node4, node5, node6, node7, node8, node9, node10, node11, node12, node13, node14, node15, node16, node17, node18, node19, node20, node21, node22, node23, node24, node25, node26, node27, node28, node29, node30];
