@@ -13,12 +13,17 @@
 </head>
 <body>
     <h1 style="text-align: center">Target Variable: Cost</h1>
-
     <div class="chart" id="cost"></div>
-    <h1 style="text-align: center">Target Variable: Lead Time</h1>
 
+    <h1 style="text-align: center">Target Variable: Lead Time</h1>
     <div class="chart" id="lead_time"></div>
-    <script src="../../vendor/raphael.js"></script>
+
+    <h1 style="text-align: center">Target Variable: Mass</h1>
+    <div class="chart" id="mass"></div>    <script src="../../vendor/raphael.js"></script>
+
+    <h1 style="text-align: center">Target Variable: Compliance</h1>
+    <div class="chart" id="compliance"></div>
+
     <script src="../../Treant.js"></script>
     
     <script src="../../vendor/jquery.min.js"></script>
@@ -32,6 +37,13 @@
     <script>
         tree = new Treant( chart_config );
     </script>
+    <script src="tree_mass.js">  </script>
+    <script>
+        tree = new Treant( chart_config );
+    </script>
+    <script src="tree_compliance.js">  </script>
+    <script>
+        tree = new Treant( chart_config );
     </script>
 </body>
 </html>
