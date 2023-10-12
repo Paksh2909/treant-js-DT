@@ -1,0 +1,50 @@
+
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+                <meta name="viewport" content="width=device-width">
+                <title> Collapsable example </title>
+                <link rel="stylesheet" href="../../Treant.css">
+                <link rel="stylesheet" href="collapsable.css">
+                <link rel="stylesheet" href="../../vendor/perfect-scrollbar/perfect-scrollbar.css">
+            </head>
+            <body>
+                <div class="chart" id="mass"></div>
+                <script src="../../vendor/raphael.js"></script>
+                <script src="../../Treant.js"></script>
+                <script src="../../vendor/jquery.min.js"></script>
+                <script src="../../vendor/jquery.easing.js"></script>
+                
+                <script>
+                    var config = {
+                container: "#mass",
+                animateOnInit: true,
+                node: {
+                    collapsable: true
+                },
+                animation: {
+                    nodeAnimation: "easeOutBounce",
+                    nodeSpeed: 700,
+                    connectorsAnimation: "bounce",
+                    connectorsSpeed: 700
+                }
+            },
+node0 = {text: {samples: '# Options: 6 (100.0%)', average: 'Average mass: 179074.79g', range: 'Range: [34861.67g - 499412.95g]', condition: 'compliance?'}},
+node1 = {parent: node0, collapsed: true, text: {filter: 'compliance <= 94.81Nm', samples: '# Options: 2 (33.33%)', average: 'Average mass: 461706.47g', range: 'Range: [424000.00g - 499412.95g]', condition: 'material?'}, folders: ['config_7', 'config_2']},
+node2 = {parent: node1, collapsed: true, text: {filter: 'material is not Al6061', samples: '# Options: 1 (16.67%)', average: 'Average mass: 424000.0', range: 'Range: [424000.00g - 424000.00g]'}, folders: ['config_7']},
+node3 = {parent: node1, collapsed: true, text: {filter: 'material is Al6061', samples: '# Options: 1 (16.67%)', average: 'Average mass: 499412.95', range: 'Range: [499412.95g - 499412.95g]'}, folders: ['config_2']},
+node4 = {parent: node0, collapsed: true, text: {filter: 'compliance > 94.81Nm', samples: '# Options: 4 (66.67%)', average: 'Average mass: 37758.94g', range: 'Range: [34861.67g - 38965.68g]', condition: 'lead_time?'}, folders: ['config_1', 'config_1', 'config_8', 'config_4']},
+node5 = {parent: node4, collapsed: true, text: {filter: 'lead_time <= 3w, 5d, 10h, 26m', samples: '# Options: 1 (16.67%)', average: 'Average mass: 34861.67', range: 'Range: [34861.67g - 34861.67g]'}, folders: ['config_8']},
+node6 = {parent: node4, collapsed: true, text: {filter: 'lead_time > 3w, 5d, 10h, 26m', samples: '# Options: 3 (50.0%)', average: 'Average mass: 38724.70g', range: 'Range: [38242.76g - 38965.68g]', condition: 'compliance?'}, folders: ['config_1', 'config_1', 'config_4']},
+node7 = {parent: node6, collapsed: true, text: {filter: 'compliance <= 38801588275.76Nm', samples: '# Options: 2 (33.33%)', average: 'Average mass: 38965.68', range: 'Range: [38965.68g - 38965.68g]'}, folders: ['config_1', 'config_1']},
+node8 = {parent: node6, collapsed: true, text: {filter: 'compliance > 38801588275.76Nm', samples: '# Options: 1 (16.67%)', average: 'Average mass: 38242.76', range: 'Range: [38242.76g - 38242.76g]'}, folders: ['config_4']},
+chart_config = [config, node0, node1, node2, node3, node4, node5, node6, node7, node8];
+                </script>
+                 <script>
+                    tree = new Treant( chart_config );
+                </script>
+            </body>
+        </html>
+        

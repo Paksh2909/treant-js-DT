@@ -1,0 +1,50 @@
+
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+                <meta name="viewport" content="width=device-width">
+                <title> Collapsable example </title>
+                <link rel="stylesheet" href="../../../../Treant.css">
+                <link rel="stylesheet" href="../../collapsable.css">
+                <link rel="stylesheet" href="../../../../vendor/perfect-scrollbar/perfect-scrollbar.css">
+            </head>
+            <body>
+                <div class="chart" id="compliance"></div>
+                <script src="../../../../vendor/raphael.js"></script>
+                <script src="../../../../Treant.js"></script>
+                <script src="../../../../vendor/jquery.min.js"></script>
+                <script src="../../../../vendor/jquery.easing.js"></script>
+                
+                <script>
+                    var config = {
+                container: "#compliance",
+                animateOnInit: true,
+                node: {
+                    collapsable: true
+                },
+                animation: {
+                    nodeAnimation: "easeOutBounce",
+                    nodeSpeed: 700,
+                    connectorsAnimation: "bounce",
+                    connectorsSpeed: 700
+                }
+            },
+node0 = {text: {samples: '# Options: 6 (100.0%)', average: 'Average compliance: 12933862972.77Nm', range: 'Range: [4.12Nm - 77603176448.00Nm]', condition: 'material?'}},
+node1 = {parent: node0, collapsed: true, text: {filter: 'material is not Ti6Al4V', samples: '# Options: 5 (83.33%)', average: 'Average compliance: 277.73Nm', range: 'Range: [4.12Nm - 1091.40Nm]', condition: 'mass?'}, folders: ['config_7', 'config_1', 'config_1', 'config_8', 'config_2']},
+node2 = {parent: node1, collapsed: true, text: {filter: 'mass <= 36913.67g', samples: '# Options: 1 (16.67%)', average: 'Average compliance: 1091.4', range: 'Range: [1091.40Nm - 1091.40Nm]'}, folders: ['config_8']},
+node3 = {parent: node1, collapsed: true, text: {filter: 'mass > 36913.67g', samples: '# Options: 4 (66.67%)', average: 'Average compliance: 74.31Nm', range: 'Range: [4.12Nm - 103.51Nm]', condition: 'mass?'}, folders: ['config_7', 'config_1', 'config_1', 'config_2']},
+node4 = {parent: node3, collapsed: true, text: {filter: 'mass <= 461706.47g', samples: '# Options: 3 (50.0%)', average: 'Average compliance: 97.71Nm', range: 'Range: [86.10Nm - 103.51Nm]', condition: 'machine_type?'}, folders: ['config_7', 'config_1', 'config_1']},
+node5 = {parent: node4, collapsed: true, text: {filter: 'machine_type is not Printer', samples: '# Options: 1 (16.67%)', average: 'Average compliance: 86.1', range: 'Range: [86.10Nm - 86.10Nm]'}, folders: ['config_7']},
+node6 = {parent: node4, collapsed: true, text: {filter: 'machine_type is Printer', samples: '# Options: 2 (33.33%)', average: 'Average compliance: 103.51', range: 'Range: [103.51Nm - 103.51Nm]'}, folders: ['config_1', 'config_1']},
+node7 = {parent: node3, collapsed: true, text: {filter: 'mass > 461706.47g', samples: '# Options: 1 (16.67%)', average: 'Average compliance: 4.12', range: 'Range: [4.12Nm - 4.12Nm]'}, folders: ['config_2']},
+node8 = {parent: node0, collapsed: true, text: {filter: 'material is Ti6Al4V', samples: '# Options: 1 (16.67%)', average: 'Average compliance: 77603176448.0', range: 'Range: [77603176448.00Nm - 77603176448.00Nm]'}, folders: ['config_4']},
+chart_config = [config, node0, node1, node2, node3, node4, node5, node6, node7, node8];
+                </script>
+                 <script>
+                    tree = new Treant( chart_config );
+                </script>
+            </body>
+        </html>
+        
