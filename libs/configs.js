@@ -53,12 +53,15 @@ let displayConfigurations = (configsBase, configs) => {
     else {
         const newImage = document.createElement('img');
         newImage.src = configsBase + "/" + configs[0] + '/xPhys.png';
+        contents.classList.add('config-detail')
+
         const closeBtn = document.createElement('button');
         closeBtn.innerHTML = 'Close';
         closeBtn.addEventListener('click', () => {
             modal.remove();
         });
-        modal.append(newImage, closeBtn);
+        contents.append(newImage);
+        modal.append(closeBtn);
     }
 
 }
