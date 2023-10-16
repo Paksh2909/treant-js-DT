@@ -1,0 +1,63 @@
+/*Image modal*/
+
+.modal {
+    width: 80%;
+    height: 80%;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    margin-top: -1px;
+    animation: zoom 0.3s ease-in-out;
+}
+
+.modal-contents {
+    width: 100%;
+    height: 90%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.config-detail {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.config-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.modal img {
+    object-fit: cover;
+}
+
+.closeBtn {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.closeBtn:hover {
+    color: rgb(255, 255, 255);
+}
