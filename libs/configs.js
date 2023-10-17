@@ -33,7 +33,7 @@ let displayConfigurations = (configsBase, configs) => {
                 title.append(link);
                 cell.append(title);
                 const newImage = document.createElement('img');
-                newImage.src = configsBase + "/" + configs[r * columns + c] + '/xPhys.png';
+                newImage.src = configsBase + "/" + configs[r * columns + c] + '/xPhys_iso.png';
                 newImage.style.width = (parseInt(modalWidth) / columns) + 'px';
                 newImage.style.height = "auto";
                 cell.append(newImage);
