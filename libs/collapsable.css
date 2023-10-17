@@ -15,6 +15,7 @@ body { background: #fff; }
 
 /*.Treant .collapse-switch { width: 16px; height: 16px; border: 1px solid black; display: block; bottom: 1px; right: 1px; left: unset; top: unset}*/
 .Treant .collapse-switch { border: 2px solid black; cursor: pointer}
+.Treant .collapse-switch:hover { background: gray}
 .Treant .node.collapsed { background-color: #DEF82D; }
 .Treant .node.collapsed .collapse-switch { background: none; }
 
