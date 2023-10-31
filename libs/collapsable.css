@@ -10,13 +10,13 @@ abbr,acronym { border:0; }
 body { background: #fff; }
 /* optional Container STYLES */
 .chart { height: 100%; margin: 5px; width: 100%; }
-.Treant > .node { padding: 3px; border: 1px solid #484848; border-radius: 3px; }
+.Treant > .node { padding: 3px; border: 1px solid #484848; border-radius: 3px; background: white}
 .Treant > .node img { width: 100%; height: 100%; }
 
 /*.Treant .collapse-switch { width: 16px; height: 16px; border: 1px solid black; display: block; bottom: 1px; right: 1px; left: unset; top: unset}*/
 .Treant .collapse-switch { border: 2px solid black; cursor: pointer}
 .Treant .collapse-switch:hover { background: gray}
-.Treant .node.collapsed { background-color: #DEF82D; }
+/*.Treant .node.collapsed { background-color: #DEF82D; }*/
 .Treant .node.collapsed .collapse-switch { background: none; }
 
 .node-filter {
@@ -29,5 +29,9 @@ body { background: #fff; }
 .node-condition {
     text-align: center;
     margin-top: 10pt;
+}
+
+.Treant > .node[data-current] {
+    background: lightgreen;
 }
 
